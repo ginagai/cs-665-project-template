@@ -15,5 +15,10 @@ package edu.bu.met.cs665.petemotion;
  */
 public interface PetObserver {
 
+    /**
+     * Reacts to an update message from the pet.
+     * @param update the message content to handle
+     */
+    void reactTo(String update);
 
 }

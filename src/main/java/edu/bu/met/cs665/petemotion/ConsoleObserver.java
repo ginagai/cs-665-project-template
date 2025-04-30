@@ -13,7 +13,14 @@ package edu.bu.met.cs665.petemotion;
 /**
  * Concrete observer that prints updates to the console.
  */
-public class ConsoleObserver {
+public class ConsoleObserver implements PetObserver {
 
-
+    /**
+     * Displays the received update message.
+     * @param update the notification message from the pet
+     */
+    @Override
+    public void reactTo(String update) {
+        System.out.println("[Observer] " + update);
+    }
 }
