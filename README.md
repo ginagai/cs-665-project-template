@@ -1,16 +1,17 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Wenli Gai                  |
+| Date         | 05/01/2025                 |
+| Course       | Spring                     |
+| Assignment # | Project                    |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+This project design a modular, extensible, simulation system for virtual pet. In response to user interaction,
+it can show corresponding reaction and transition from different emotional state.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/ginagai/cs-665-project-template
 
 # Implementation Description 
 
@@ -19,11 +20,20 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+- - The system is flexible and new pet moods or responses can be added simply by creating new class.
+- - Implementing PetState Interface, instead of changing the core logic.
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+- - Each class has a single, specific responsibility. The structure make the code intuitive and easy to maintain.
 - Describe how you have avoided duplicated code and why it is important.
+- - Duplication is avoided by using polymorphism and delegation. The Moodpet class delegates all emotion transition or 
+- - behavior to PetState object.
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+- - State Pattern is used to encapsulate dynamic emotional behavior.
+- - Observer Pattern is used to decouple mood changes from notification logic.
+- - Mediator Pattern is used to centralize communication logic.
+- - Singleton Pattern is used to manage pet profile metadata via a single global instance.
 
 
 # Maven Commands
