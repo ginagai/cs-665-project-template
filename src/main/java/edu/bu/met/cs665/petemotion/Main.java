@@ -13,6 +13,15 @@ package edu.bu.met.cs665.petemotion;
  */
 public class Main {
     public static void main(String[] args) {
+        PetMediator mediator = new ConsoleMediator();
+        MoodPet pet = new MoodPet(mediator);
+        pet.addObserver(new ConsoleObserver());
+
+        System.out.println("Pet initialized. Mood: " + pet.getCurrentMoodLabel());
+        pet.neglect();  // Sad
+        pet.neglect();  // Angry
+        pet.offerSnack();  // Sad
+        pet.startPlaySession();  // Happy
 
     }
 }
