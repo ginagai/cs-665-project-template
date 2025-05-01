@@ -13,7 +13,12 @@ package edu.bu.met.cs665.petemotion;
  * Mediator interface for message broadcasting.
  */
 public interface PetMediator {
-
+    /**
+     * Handles broadcasting or relaying of pet messages.
+     *
+     * @param msg the message generated from pet behavior
+     */
+    void mediate(String msg);
 
 }
 

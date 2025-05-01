@@ -14,7 +14,14 @@ package edu.bu.met.cs665.petemotion;
 /**
  * Concrete mediator that relays messages to the console.
  */
-public class ConsoleMediator {
+public class ConsoleMediator implements PetMediator {
 
-
+    /**
+     * Prints the given message to the console, prefixed for clarity.
+     * @param msg the message to display
+     */
+    @Override
+    public void mediate(String msg) {
+        System.out.println("[Mediator] " + msg);
+    }
 }
